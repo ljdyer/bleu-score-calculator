@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BLEU score calculator</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="/static/css/style.css" rel="stylesheet">
+		<!-- <script type="text/javascript" src="static/js/main.js"></script> -->
+		<!-- Dropzone -->
+		<script src="/static/css/dropzone.min.js"></script>
+		<link rel="stylesheet" href="static/css/dropzone.min.css" type="text/css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>BLEU score calculator</h1>
+		</div>
+		<form action="{{ url_for('upload') }}" class="dropzone" id="dropzone" method="POST" enctype="multipart/form-data">
+			<div class="dz-message" data-dz-message><span>Drop a file here to calculate BLEU scores.</span></div>
+			{{ dropzone.style('border: 2px dashed #0087F7; padding: 5px; margin: 10px; min-height: 100px;') }}	
+		</form>
+		
+		<script>
+		Dropzone.autoDiscover = false;
+		$(function() {
+		  	var myDropzone = new Dropzone("#dropzone");
+			Dropzone.options.myDropzone = {
+				maxFiles: 1
+		  	};
+		  	myDropzone.on("addedfile", function(){
+        		// Called when a file is added
+        		console.log('A file was added.')
+			});
+		  	myDropzone.on("queuecomplete", function(file) {
+				// Called when all files in the queue finish uploading
+				window.location = "{{ url_for('upload') }}";
+		  	});
+		});
+		</script>
+		<div class="container">
+			<a href="https://github.com/ljdyer/bleu-score-calculator" target="_blank"><img src="static/img/github-logo.png"></img></a>
+		</div>
+	</body>
+</html>

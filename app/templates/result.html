@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BLEU score calculator</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="/static/css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>BLEU score calculator</h1>
+		</div>
+		<div class="container">
+			{% if scores %}
+				{% for key, value in scores.items() %}
+				<p><b>{{key}}:</b> {{'%0.2f' % value}}</p>
+				{% endfor %}
+			{% endif %}
+			{% if best %}
+				<p>
+					<b>Best hypothesis sentence:</b><br>
+					Reference: {{ best['reference'] }}<br>
+					Hypothesis: {{ best['hypothesis'] }} (from {{ best['hypset'] }})<br>
+					Score: {{ '%0.2f' % best['score'] }}<br>
+				</p>
+			{% endif %}
+			{% if worst %}
+				<p>
+					<b>Worst hypothesis sentence:</b><br>
+					Reference: {{ worst['reference'] }}<br>
+					Hypothesis: {{ worst['hypothesis'] }} (from {{ worst['hypset'] }})<br>
+					Score: {{ '%0.2f' % worst['score'] }}<br>
+				</p>
+			{% endif %}
+		</div>
+		<div class="container extra-spacing">
+			<a href="../">Start again with a new file</a>
+		</div>
+		<div class="container">
+			<a href="https://github.com/ljdyer/bleu-score-calculator" target="_blank">
+				<img src="static/img/github-logo.png"></img>
+			</a>
+		</div>
+	</body>
+</html>

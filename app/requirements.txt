@@ -1,0 +1,6 @@
+pandas
+flask
+gunicorn
+flask-dropzone
+openpyxl
+nltk

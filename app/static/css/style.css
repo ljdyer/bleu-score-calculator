@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+}
+
+.extra-spacing{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+img{
+    margin-left: 15px;
+    margin-right: 15px;
+    max-height: 35px
+}
+
+body {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font: 18px/1.4 'Open Sans', sans-serif;
+    color: #495057;
+    background-color: #f1f3f5;
+}
+
+h1 {
+    margin: auto;
+}
+
+.score-table{
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-spacing: 0px;
+}
+
+.score-table td{
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.score-display{
+    width: 200px;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+.score{
+    font-size: 2.5em;
+}
+
+.score-desc{
+    font-size: 0.8em;
+}
+
+section {
+    margin-top: 60px;
+}
+
+.input-container{
+    width: 100%
+}
