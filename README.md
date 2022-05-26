@@ -6,9 +6,12 @@ A web app for calculating BLEU scores
 
 Drag and drop the file containing your language data into the dropzone on the landing page to see BLEU score information.
 
-The file should be an .xlsx file with the following columns:
+Files must be in .xlsx format. The first cell in each column will be interpreted as the column header.
 
+Your file should include the following column headers:
 
+- A single reference column, whose header begins with the word 'reference' (Examples of permissible reference column headers: 'reference', 'Reference sentences')
+- One or more hypothesis columns, whose headers begin with the word 'hypothesis' (Examples of permissible reference column headers: 'hypothesis', 'Hypothesis 1: Google MT')
 
 # Credits
 

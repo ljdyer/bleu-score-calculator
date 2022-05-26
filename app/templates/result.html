@@ -19,9 +19,32 @@
 				{% endfor %}
 			{% endif %}
 			{% if min_max %}
-				{% for key, value in min_max.items() %}
-					{{ key }}
-				{% endfor %}
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Lowest sentence score</th>
+						<th>Highest sentence score</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for hyp, min_max_ in min_max.items() %}
+					<tr>
+						<th>{{ hyp }}</th>
+						<td>
+							<b>Reference:</b> {{ min_max_.min.reference }}<br>
+							<b>Hypothesis:</b> {{ min_max_.min.hypothesis }}<br>
+							<b>Score:</b> {{ '%0.2f' % min_max_.min.score }}
+						</td>
+						<td>
+							<b>Reference:</b> {{ min_max_.max.reference }}<br>
+							<b>Hypothesis:</b> {{ min_max_.max.hypothesis }}<br>
+							<b>Score:</b> {{ '%0.2f' % min_max_.max.score }}
+						</td>
+					</tr>
+					{% endfor %}
+					</tbody>
+				</table>
 			{% endif %}
 		</div>
 		<div class="container extra-spacing">
