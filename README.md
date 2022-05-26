@@ -4,7 +4,11 @@ A web app for calculating BLEU scores
 
 ## How to use
 
-coming soon
+Drag and drop the file containing your language data into the dropzone on the landing page to see BLEU score information.
+
+The file should be an .xlsx file with the following columns:
+
+
 
 # Credits
 

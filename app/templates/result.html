@@ -18,21 +18,10 @@
 				<p><b>{{key}}:</b> {{'%0.2f' % value}}</p>
 				{% endfor %}
 			{% endif %}
-			{% if best %}
-				<p>
-					<b>Best hypothesis sentence:</b><br>
-					Reference: {{ best['reference'] }}<br>
-					Hypothesis: {{ best['hypothesis'] }} (from {{ best['hypset'] }})<br>
-					Score: {{ '%0.2f' % best['score'] }}<br>
-				</p>
-			{% endif %}
-			{% if worst %}
-				<p>
-					<b>Worst hypothesis sentence:</b><br>
-					Reference: {{ worst['reference'] }}<br>
-					Hypothesis: {{ worst['hypothesis'] }} (from {{ worst['hypset'] }})<br>
-					Score: {{ '%0.2f' % worst['score'] }}<br>
-				</p>
+			{% if min_max %}
+				{% for key, value in min_max.items() %}
+					{{ key }}
+				{% endfor %}
 			{% endif %}
 		</div>
 		<div class="container extra-spacing">
