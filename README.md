@@ -23,6 +23,6 @@ You can try it out using the sample data [here](app/test_files/ja_en_test.xlsx)
 
 # Credits
 
-https://flask-dropzone.readthedocs.io/en/latest/
-https://github.com/Manav1918/drag-drop-file-flask
-https://www.dropzone.dev/js/
+- https://flask-dropzone.readthedocs.io/en/latest/
+- https://github.com/Manav1918/drag-drop-file-flask
+- https://www.dropzone.dev/js/
