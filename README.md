@@ -8,7 +8,9 @@ A web app for calculating BLEU scores
 
 ## How to use
 
-Drag and drop the file containing your language data into the dropzone on the landing page to see BLEU score information.
+Go to https://bleu-score-calculator.herokuapp.com/.
+
+On the landing page, drag your training data file into the dropzone or click to browse your computer.
 
 Files must be in .xlsx format. The first cell in each column will be interpreted as the column header.
 
